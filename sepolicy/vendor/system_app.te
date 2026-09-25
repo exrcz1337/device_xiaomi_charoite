@@ -1,0 +1,8 @@
+# Battery
+rw_dir_file(system_app, sysfs_power_supply)
+
+# Thermal
+rw_dir_file(system_app, sysfs_therm)
+
+# CPU
+allow system_app proc_stat:file { read open getattr };

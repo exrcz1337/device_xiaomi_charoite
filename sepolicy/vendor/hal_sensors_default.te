@@ -1,0 +1,20 @@
+hal_client_domain(hal_sensors_default, hal_audio)
+
+allow hal_sensors_default sensors_device:chr_file rw_file_perms;
+allow hal_sensors_default vendor_fingerprint_sysfs:file rw_file_perms;
+
+get_prop(hal_sensors_default, vendor_sensors_prop)
+allow hal_sensors_default audio_socket:sock_file rw_file_perms;
+allow hal_sensors_default sound_device:chr_file rw_file_perms;
+allow hal_sensors_default hal_audio_default:unix_stream_socket connectto;
+
+# Allow Sensors hal to find hal_audio_hwservice
+hal_client_domain(hal_sensors_default, hal_audio)
+allow hal_sensors_default hal_audio_hwservice:hwservice_manager find;
+
+# Dontaudit Sensors to read default_prop
+dontaudit hal_sensors_default default_prop:file read;
+
+binder_use(hal_sensors_default)
+binder_call(hal_sensors_default, system_server)
+binder_call(hal_sensors_default, hal_audio_default)

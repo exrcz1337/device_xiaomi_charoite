@@ -1,0 +1,12 @@
+# Firmware from OS2.0.210.0.VPFMIXM
+dpm.img;AB
+gz.img;AB
+lk.img;AB|e6cc3662f5876a3478cf9b08bf9cc29ed12e6e90
+mcupm.img;AB
+md1img.img;AB
+pi_img.img;AB
+preloader_charoite.bin:preloader_raw.img;AB|0f57a59b3e362398a27b0b62acc7715c44a6e5fa
+scp.img;AB
+spmfw.img;AB
+sspm.img;AB
+tee.img;AB
