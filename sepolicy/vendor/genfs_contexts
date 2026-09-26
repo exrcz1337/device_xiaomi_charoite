@@ -4,7 +4,6 @@ genfscon sysfs /class/mi_display/disp-DSI-0/panel_info                          
 
 # Extcon
 genfscon sysfs /devices/platform/extcon_usb1 u:object_r:sysfs_extcon:s0
-genfscon sysfs /devices/platform/extcon_usb u:object_r:sysfs_extcon:s0
 
 # Health
 genfscon sysfs /devices/platform/soc/soc:hq_chg_manager/power_supply/battery u:object_r:sysfs_power_supply:s0
