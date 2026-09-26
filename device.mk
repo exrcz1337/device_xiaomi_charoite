@@ -340,7 +340,7 @@ PRODUCT_PACKAGES += \
     init.modem.rc \
     init.mt6789.rc \
     init.mt6789.power.rc \
-    init.mt6789.usb.rc \
+    charoite.init.mt6789.usb.rc \
     init.mtkgki.rc \
     init.project.rc \
     init.sensor_2_0.rc \
